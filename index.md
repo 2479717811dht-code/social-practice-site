@@ -5,7 +5,7 @@ hero:
   text: "CKC && XSH"
   tagline: "桂脉赓红血，壮肩扛复兴"
   image:
-    src: /20260323101521_872_96.png
+    src: /cover.png
     alt: "Logo"
   actions:
     - theme: brand
