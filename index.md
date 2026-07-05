@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: "相思湖畔，往事徐来"
-  text: "ZJU && CKC"
+  text: "CKC && XSH"
   tagline: "桂脉赓红血，壮肩扛复兴"
   actions:
     - theme: brand

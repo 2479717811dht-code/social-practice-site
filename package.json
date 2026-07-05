@@ -15,7 +15,15 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@mdit/plugin-footnote": "^1.0.1",
+    "@mdit/plugin-mark": "^1.0.1",
+    "@mdit/plugin-sub": "^1.0.1",
+    "@mdit/plugin-sup": "^1.0.1",
+    "@mdit/plugin-tasklist": "^1.0.1",
+    "mermaid": "^11.16.0",
+    "typescript": "^6.0.3",
     "vitepress": "^1.6.4",
+    "vitepress-plugin-mermaid": "^2.0.17",
     "vue": "^3.5.39"
   }
 }
