@@ -16,11 +16,12 @@ import { withBase } from 'vitepress'
 >
 </iframe>
 
+
 ---
 
 ### 📥 备用下载链接
 如果您的浏览器无法正常预览，可以点击下方链接直接下载：
 
-<a :href="withBase('/pdfs/practice-report.pdf')" target="_blank" style="color: var(--vp-c-brand-1); font-weight: bold; text-decoration: underline;">
+<a :href="withBase('/pdfs/test.pdf')" target="_blank" style="color: var(--vp-c-brand-1); font-weight: bold; text-decoration: underline;">
   点击下载实践报告 PDF 文件
 </a>
