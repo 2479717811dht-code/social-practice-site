@@ -88,7 +88,7 @@ export default withMermaid(
 
     themeConfig: {
       // 2. 完美继承你指定的图标与标题
-      logo: '/20260323101521_872_96.png',
+      logo: '/social-practice-site/20260323101521_872_96.png',
 
       siteTitle: '浙江大学 && 相思湖学校',
 
@@ -128,7 +128,8 @@ export default withMermaid(
           text: '成果成果归档',
           collapsed: false,
           items: [
-            { text: '调研报告与支撑材料', link: '/Materials/report' }
+            { text: '暑期支教', link: '/Materials/volunteer_teaching' },
+            { text: '红色调研', link: '/Materials/research' }
           ]
         }
       ],
