@@ -7,8 +7,9 @@ import { withBase } from 'vitepress'
 以下是浙大竺院赴南宁实践团的成果报告，您可以直接在线翻阅：
 
 <!-- 1. 绝对安全的 PDF 在线预览 -->
+
 <iframe 
-  :src="withBase('/pdfs/practice-report.pdf')" 
+  :src="withBase('/pdfs/test.pdf')" 
   width="100%" 
   height="800px" 
   style="border: none; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);"
