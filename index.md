@@ -1,9 +1,9 @@
 ---
 layout: home
 hero:
-  name: "浙大竺院赴南宁实践团"
-  text: "桂脉赓红血，壮肩扛复兴"
-  tagline: "浙江大学竺可桢学院学生团委青年志愿者指导中心赴广西壮族自治区南宁市暑期社会实践团"
+  name: "相思湖畔，往事徐来"
+  text: "ZJU && CKC"
+  tagline: "桂脉赓红血，壮肩扛复兴"
   actions:
     - theme: brand
       text: 了解团队简介
