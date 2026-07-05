@@ -83,7 +83,7 @@ export default withMermaid(
 
     head: [
       // 这里的路径前缀也同步自动修正为当前项目路径
-      ['link', { rel: 'icon', href: '/social-practice-site/link.png' }] 
+      ['link', { rel: 'icon', href: '/social-practice-site/linking.png' }] 
     ],
 
     themeConfig: {
