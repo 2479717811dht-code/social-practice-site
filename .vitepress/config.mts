@@ -112,6 +112,7 @@ export default withMermaid(
           text: '关于我们',
           collapsed: false,
           items: [
+            { text: '概览', link: '/Intro/readme' },
             { text: '团队与队员介绍', link: '/Intro/team' },
             { text: '实践背景与意义', link: '/Intro/background' }
           ]
@@ -120,6 +121,7 @@ export default withMermaid(
           text: '实践动态（每日日志）',
           collapsed: false,
           items: [
+            { text: '概览', link: '/News/readme' },
             { text: 'Day 1：出征仪式与启程', link: '/News/day01' },
             { text: 'Day 2：深入基层调研', link: '/News/day02' }
           ]
@@ -128,6 +130,7 @@ export default withMermaid(
           text: '成果成果归档',
           collapsed: false,
           items: [
+            { text: '概览', link: '/Materials/readme' },
             { text: '暑期支教', link: '/Materials/volunteer_teaching' },
             { text: '红色调研', link: '/Materials/research' }
           ]
