@@ -88,9 +88,9 @@ export default withMermaid(
 
     themeConfig: {
       // 2. 完美继承你指定的图标与标题
-      logo: '/social-practice-site/20260323101521_872_96.png',
+      logo: '/20260323101521_872_96.png',
 
-      siteTitle: '浙江大学 && 相思湖学校',
+      siteTitle: '竺可桢学院 && 相思湖学校',
 
       // 右侧目录：显示 h2 到 h6
       outline: {

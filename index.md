@@ -4,6 +4,9 @@ hero:
   name: "相思湖畔，往事徐来"
   text: "CKC && XSH"
   tagline: "桂脉赓红血，壮肩扛复兴"
+  image:
+    src: /20260323101521_872_96.png
+    alt: "Logo"
   actions:
     - theme: brand
       text: 了解团队简介
