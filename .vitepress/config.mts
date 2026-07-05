@@ -101,9 +101,9 @@ export default withMermaid(
       // 3. 顶部导航栏
       nav: [
         { text: '首页', link: '/' },
-        { text: '团队简介', link: '/Intro/team' },
-        { text: '实践动态', link: '/News/day01' },
-        { text: '成果材料', link: '/Materials/report' }
+        { text: '团队简介', link: '/Intro/readme' },
+        { text: '实践动态', link: '/News/readme' },
+        { text: '成果材料', link: '/Materials/readme' }
       ],
 
       // 4. 左侧侧边栏
