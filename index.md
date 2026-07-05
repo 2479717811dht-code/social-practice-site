@@ -1,0 +1,25 @@
+---
+layout: home
+hero:
+  name: "浙大竺院赴南宁实践团"
+  text: "桂脉赓红血，壮肩扛复兴"
+  tagline: "浙江大学竺可桢学院学生团委青年志愿者指导中心赴广西壮族自治区南宁市暑期社会实践团"
+  actions:
+    - theme: brand
+      text: 了解团队简介
+      link: /Intro/team
+    - theme: alt
+      text: 查看实践动态
+      link: /News/day01
+
+features:
+  - title: "🧱 团队简介"
+    details: "汇聚竺院优秀学子，明确分工职责，全心投入本次赴广西南宁的社会实践活动。"
+    link: /Intro/team
+  - title: "📰 实践动态"
+    details: "每日更新实践日志与新闻速递，实时追踪调研足迹，展现青年担当。"
+    link: /News/day01
+  - title: "📊 成果归档"
+    details: "在线托管与展示完整的调研报告、数据材料与实践成果，支持 PDF 原件直接阅读。"
+    link: /Materials/report
+---
