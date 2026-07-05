@@ -114,6 +114,8 @@ export default withMermaid(
           items: [
             { text: '概览', link: '/Intro/readme' },
             { text: '团队与队员介绍', link: '/Intro/team' },
+            { text: '破冰活动', link: '/Intro/ice_breaking' },
+            { text: '社会实践立项', link: '/Intro/project_proposal' },
             { text: '实践背景与意义', link: '/Intro/background' }
           ]
         },
