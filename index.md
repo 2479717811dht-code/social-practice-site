@@ -18,25 +18,6 @@ hero:
     - theme: alt
       text: Check in GitHub
       link: https://github.com/2479717811dht-code/social-practice-site
-
-features:
-  - icon: "👥"
-    title: "团队简介"
-    details: "汇聚竺院学子，明确实践分工与服务方向，共同投入赴广西南宁的暑期社会实践。"
-    link: /Intro/readme
-    linkText: "走进团队"
-
-  - icon: "📰"
-    title: "实践动态"
-    details: "记录每日行程、调研足迹与服务现场，呈现青年学生在基层实践中的真实收获。"
-    link: /News/readme
-    linkText: "查看日志"
-
-  - icon: "📚"
-    title: "成果归档"
-    details: "集中展示红色调研、暑期支教、宣传物料与总结材料，沉淀完整实践成果。"
-    link: /Materials/readme
-    linkText: "浏览材料"
 ---
 
 <MotionSection>
@@ -85,6 +66,37 @@ features:
     <div class="practice-route__number">03 · SHARE</div>
     <h3>成果转化</h3>
     <p>通过调研报告、微团课、主题视频与宣传材料，让实践持续产生影响。</p>
+  </article>
+</div>
+
+  </section>
+</MotionSection>
+
+<MotionSection>
+  <section class="home-section home-links-section">
+    <p class="home-eyebrow home-eyebrow--center">EXPLORE MORE</p>
+<h2 class="home-title--center">更多实践内容</h2>
+
+<div class="home-links">
+  <article class="home-link-card">
+    <div class="home-link-card__icon">👥</div>
+    <h3>团队简介</h3>
+    <p>汇聚竺院学子，明确实践分工与服务方向，共同投入赴广西南宁的暑期社会实践。</p>
+    <a class="home-link-card__link" href="/Intro/readme">走进团队 →</a>
+  </article>
+
+  <article class="home-link-card">
+    <div class="home-link-card__icon">📰</div>
+    <h3>实践动态</h3>
+    <p>记录每日行程、调研足迹与服务现场，呈现青年学生在基层实践中的真实收获。</p>
+    <a class="home-link-card__link" href="/News/readme">查看日志 →</a>
+  </article>
+
+  <article class="home-link-card">
+    <div class="home-link-card__icon">📚</div>
+    <h3>成果归档</h3>
+    <p>集中展示红色调研、暑期支教、宣传物料与总结材料，沉淀完整实践成果。</p>
+    <a class="home-link-card__link" href="/Materials/readme">浏览材料 →</a>
   </article>
 </div>
 
