@@ -27,8 +27,11 @@ hero:
 
 <p class="home-section__desc">
   我们选择广西南宁作为本次暑期社会实践地，主要基于两方面考虑。
+  
   第一，广西具有深厚的红色文化底蕴。百色起义、龙州起义等重要革命历史事件在这里留下了丰富的红色资源，南宁的纪念馆、革命遗址和历史场馆也具有较强的教育意义。
+  
   第二，当地存在一定的教育帮扶需求，尤其在课后服务、兴趣拓展和综合实践课程等方面仍需要支持。因此，我们希望将红色文化调研与公益支教结合，形成“红色调研 + 公益支教”的双线实践模式：一方面实地走访、学习革命历史、传承红色基因；另一方面走进学校、服务学生，为基层教育贡献青年力量。
+  
   因此，我们前往广西进行社会实践的初衷可以总结为以下四点：第一是思想铸魂，通过红色调研学习革命精神；第二是教育帮扶，通过支教补充课后教育资源；第三是实践育人，让队员在真实社会场景中提升能力；第四是社会服务，以青年行动回应现实需求，体现新时代大学生的责任担当。
 </p>
 
@@ -53,17 +56,28 @@ hero:
 
 <div class="practice-route">
   <article class="practice-route__item">
+    <a
+      class="practice-route__cover-link"
+      href="./Materials/research"
+      aria-label="查看红色调研成果"
+    ></a>
+
     <div class="practice-route__number">01 · RESEARCH</div>
     <h3>走访调研</h3>
     <p>深入红色文化场馆与实践现场，梳理历史资源、记录革命故事。</p>
   </article>
 
   <article class="practice-route__item">
+    <a
+      class="practice-route__cover-link"
+      href="./Materials/volunteer_teaching"
+      aria-label="查看暑期支教内容"
+    ></a>
+
     <div class="practice-route__number">02 · SERVICE</div>
     <h3>公益支教</h3>
     <p>围绕学习辅导、兴趣拓展与励志教育，为学生带来真实陪伴。</p>
   </article>
-
 </div>
 
   </section>

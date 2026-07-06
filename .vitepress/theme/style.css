@@ -209,8 +209,8 @@
 /* 实践路线卡片 */
 .practice-route {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
   margin-top: 30px;
 }
 
@@ -224,6 +224,22 @@
   transition:
     transform 0.28s ease,
     box-shadow 0.28s ease;
+}
+
+.practice-route__item {
+  cursor: pointer;
+}
+
+.practice-route__cover-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.practice-route__cover-link:focus-visible {
+  outline: 3px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
 }
 
 .practice-route__item::before {
