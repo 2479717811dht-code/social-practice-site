@@ -41,7 +41,7 @@ features:
 
 <MotionSection>
   <section class="home-section">
-    <p class="home-eyebrow">OUR PRACTICE · 2026</p>
+    <p class="home-eyebrow home-eyebrow--center">OUR PRACTICE · 2026</p>
 <h2>从红色调研出发，把青春写在基层一线</h2>
 
 <p class="home-section__desc">
@@ -61,7 +61,7 @@ features:
 
 <MotionSection>
   <section class="home-section">
-    <p class="home-eyebrow">PRACTICE ROUTE</p>
+    <p class="home-eyebrow home-eyebrow--center">PRACTICE ROUTE</p>
 <h2>一场从调研到行动的青春实践</h2>
 
 <div class="practice-route">
