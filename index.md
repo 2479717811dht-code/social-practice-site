@@ -75,7 +75,7 @@ hero:
 <MotionSection>
   <section class="home-section home-links-section">
     <p class="home-eyebrow home-eyebrow--center">EXPLORE MORE</p>
-<h2 class="home-title--center">更多实践内容</h2>
+<h2 class="home-title--center">实践内容</h2>
 
 <div class="home-links">
   <article class="home-link-card">
