@@ -146,10 +146,7 @@
   letter-spacing: 0.18em;
 }
 
-.home-eyebrow--center {
-  text-align: center;
-}
-
+.home-eyebrow--center,
 .home-title--center {
   text-align: center;
 }
@@ -167,6 +164,14 @@
   color: var(--vp-c-text-2);
   font-size: 1.04rem;
   line-height: 2;
+}
+
+.home-section__desc p {
+  margin: 0 0 16px;
+}
+
+.home-section__desc p:last-child {
+  margin-bottom: 0;
 }
 
 /* 关键词 */
@@ -221,13 +226,10 @@
   border: 1px solid rgba(169, 40, 45, 0.1);
   border-radius: 20px;
   background: var(--vp-c-bg-soft);
+  cursor: pointer;
   transition:
     transform 0.28s ease,
     box-shadow 0.28s ease;
-}
-
-.practice-route__item {
-  cursor: pointer;
 }
 
 .practice-route__cover-link {
@@ -276,7 +278,7 @@
   line-height: 1.8;
 }
 
-/* 最后的三个图标入口卡片 */
+/* 底部实践入口卡片 */
 .home-links-section {
   padding-bottom: 84px;
 }
@@ -302,8 +304,6 @@
       rgba(255, 249, 242, 0.9)
     );
   box-shadow: 0 10px 28px rgba(92, 32, 30, 0.06);
-  color: var(--vp-c-text-1);
-  text-decoration: none;
   transition:
     transform 0.28s ease,
     box-shadow 0.28s ease,
@@ -365,7 +365,7 @@
     );
 }
 
-/* 进入视口动画 */
+/* 滚动显现动画 */
 .motion-section.is-ready {
   opacity: 0;
   transform: translateY(28px);
