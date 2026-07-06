@@ -42,18 +42,22 @@ features:
 <MotionSection>
   <section class="home-section">
     <p class="home-eyebrow home-eyebrow--center">OUR PRACTICE · 2026</p>
-<h2>从红色调研出发，把青春写在基层一线</h2>
+<h2 class="home-title--center">从红色调研出发，把青春写在基层一线</h2>
 
 <p class="home-section__desc">
   团队立足广西丰富的红色文化资源，走进革命纪念场馆与基层教育现场。
   我们希望以调研梳理历史脉络，以支教回应现实需求，也让青年学生在实践中理解责任、增长本领。
 </p>
 
-<div class="home-tags">
-  <span>红色文化调研</span>
-  <span>公益支教服务</span>
-  <span>青年实践成长</span>
-  <span>成果传播转化</span>
+<div class="home-tags-wrap">
+  <p class="home-tags-label">关键词</p>
+
+  <div class="home-tags">
+    <span>红色文化调研</span>
+    <span>公益支教服务</span>
+    <span>青年实践成长</span>
+    <span>成果传播转化</span>
+  </div>
 </div>
 
   </section>
@@ -62,7 +66,7 @@ features:
 <MotionSection>
   <section class="home-section">
     <p class="home-eyebrow home-eyebrow--center">PRACTICE ROUTE</p>
-<h2>一场从调研到行动的青春实践</h2>
+<h2 class="home-title--center">一场从调研到行动的青春实践</h2>
 
 <div class="practice-route">
   <article class="practice-route__item">

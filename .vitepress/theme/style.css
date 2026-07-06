@@ -175,11 +175,14 @@
   align-items: center;
   justify-content: center;
 
-  width: 84px;
-  height: 84px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 18px;
+  padding: 0;
   box-sizing: border-box;
 
-  font-size: 34px;
+  border-radius: 12px;
+  font-size: 27px;
   line-height: 1;
   text-align: center;
 
@@ -217,7 +220,7 @@
 }
 
 .home-section__desc {
-  max-width: 760px;
+  max-width: none;
   margin-top: 20px;
   color: var(--vp-c-text-2);
   font-size: 1.04rem;
@@ -369,4 +372,26 @@
     transition: none !important;
     transform: none !important;
   }
+}
+
+.home-title--center {
+  text-align: center;
+}
+
+.home-tags-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.home-tags-label {
+  margin: 0 0 12px;
+  color: var(--vp-c-text-2);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.home-tags {
+  justify-content: center;
+  margin-top: 0;
 }
