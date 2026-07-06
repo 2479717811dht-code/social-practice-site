@@ -1,0 +1,357 @@
+:root {
+  --vp-font-family-base:
+    "PingFang SC",
+    "Microsoft YaHei",
+    "Noto Sans SC",
+    system-ui,
+    sans-serif;
+
+  --vp-c-brand-1: #a9282d;
+  --vp-c-brand-2: #c54038;
+  --vp-c-brand-3: #831a20;
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background:
+    linear-gradient(120deg, #9d2028 0%, #d08a35 100%);
+}
+
+.dark {
+  --vp-c-brand-1: #e56d62;
+  --vp-c-brand-2: #f08e74;
+  --vp-c-brand-3: #b9433b;
+}
+
+/* 顶部导航栏玻璃效果 */
+.VPNavBar {
+  background: rgba(255, 252, 247, 0.78) !important;
+  border-bottom: 1px solid rgba(169, 40, 45, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .VPNavBar {
+  background: rgba(25, 22, 22, 0.76) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* 首页主视觉 */
+.VPHomeHero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-top: 92px;
+  padding-bottom: 76px;
+}
+
+.VPHomeHero::before {
+  position: absolute;
+  top: -310px;
+  right: -220px;
+  z-index: -1;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(202, 112, 47, 0.24) 0%,
+      rgba(181, 44, 46, 0.12) 42%,
+      transparent 72%
+    );
+  content: "";
+  animation: warm-glow 8s ease-in-out infinite alternate;
+}
+
+.VPHomeHero::after {
+  position: absolute;
+  bottom: -320px;
+  left: -230px;
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(168, 40, 45, 0.15) 0%,
+      transparent 70%
+    );
+  content: "";
+}
+
+.VPHomeHero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.VPHomeHero .name {
+  font-size: clamp(1rem, 1.8vw, 1.28rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.VPHomeHero .text {
+  max-width: 13ch;
+  font-size: clamp(2.45rem, 5vw, 4.5rem);
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.VPHomeHero .tagline {
+  max-width: 36rem;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.VPHomeHero .image-container {
+  animation: logo-float 5s ease-in-out infinite;
+}
+
+.VPHomeHero .image-container img {
+  border: 1px solid rgba(183, 47, 45, 0.18);
+  border-radius: 30px;
+  box-shadow:
+    0 24px 60px rgba(110, 28, 28, 0.2),
+    0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* 首页按钮 */
+.VPHomeHero .VPButton {
+  border-radius: 999px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.VPHomeHero .VPButton:hover {
+  transform: translateY(-3px);
+}
+
+.VPHomeHero .VPButton.brand:hover {
+  box-shadow: 0 12px 26px rgba(169, 40, 45, 0.28);
+}
+
+/* 三张功能卡片 */
+.VPFeatures {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 30px;
+}
+
+.VPFeature {
+  border: 1px solid rgba(169, 40, 45, 0.1);
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 249, 242, 0.84)
+    );
+  box-shadow: 0 10px 28px rgba(92, 32, 30, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.dark .VPFeature {
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(42, 36, 35, 0.92),
+      rgba(28, 25, 25, 0.9)
+    );
+}
+
+.VPFeature:hover {
+  border-color: rgba(169, 40, 45, 0.3);
+  box-shadow: 0 20px 42px rgba(92, 32, 30, 0.14);
+  transform: translateY(-8px);
+}
+
+.VPFeature .icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.VPFeature:hover .icon {
+  transform: scale(1.14) rotate(-4deg);
+}
+
+/* 首页额外内容区域 */
+.home-section {
+  box-sizing: border-box;
+  width: min(calc(100% - 48px), 1152px);
+  margin: 88px auto 0;
+}
+
+.home-eyebrow {
+  margin-bottom: 14px;
+  color: var(--vp-c-brand-1);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.home-section h2 {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.3;
+}
+
+.home-section__desc {
+  max-width: 760px;
+  margin-top: 20px;
+  color: var(--vp-c-text-2);
+  font-size: 1.04rem;
+  line-height: 2;
+}
+
+.home-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.home-tags span {
+  padding: 8px 15px;
+  border: 1px solid rgba(169, 40, 45, 0.14);
+  border-radius: 999px;
+  background: rgba(169, 40, 45, 0.06);
+  color: var(--vp-c-brand-1);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dark .home-tags span {
+  border-color: rgba(229, 109, 98, 0.2);
+  background: rgba(229, 109, 98, 0.1);
+}
+
+/* 实践路线卡片 */
+.practice-route {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.practice-route__item {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 24px;
+  border: 1px solid rgba(169, 40, 45, 0.1);
+  border-radius: 20px;
+  background: var(--vp-c-bg-soft);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.practice-route__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(#a9282d, #d08a35);
+  content: "";
+}
+
+.practice-route__item:hover {
+  box-shadow: 0 18px 36px rgba(92, 32, 30, 0.12);
+  transform: translateY(-6px);
+}
+
+.practice-route__number {
+  color: var(--vp-c-brand-1);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.practice-route__item h3 {
+  margin: 12px 0 10px;
+  color: var(--vp-c-text-1);
+  font-size: 1.22rem;
+}
+
+.practice-route__item p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+/* 进入视口时的显现动画 */
+.motion-section.is-ready {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.motion-section.is-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes logo-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes warm-glow {
+  from {
+    transform: scale(0.94);
+    opacity: 0.72;
+  }
+
+  to {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .VPHomeHero {
+    padding-top: 54px;
+    padding-bottom: 44px;
+  }
+
+  .home-section {
+    width: min(calc(100% - 32px), 1152px);
+    margin-top: 58px;
+  }
+
+  .practice-route {
+    grid-template-columns: 1fr;
+  }
+
+  .VPHomeHero .image-container img {
+    border-radius: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPHomeHero::before,
+  .VPHomeHero .image-container,
+  .VPFeature,
+  .VPHomeHero .VPButton,
+  .practice-route__item,
+  .motion-section.is-ready,
+  .motion-section.is-ready.is-visible {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

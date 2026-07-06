@@ -130,7 +130,7 @@ export default withMermaid(
           ]
         },
         {
-          text: '成果成果归档',
+          text: '成果归档',
           collapsed: false,
           items: [
             { text: '概览', link: '/Materials/readme' },
