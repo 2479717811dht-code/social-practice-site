@@ -101,13 +101,31 @@ export default withMermaid(
       // 3. 顶部导航栏
       nav: [
         { text: '首页', link: '/' },
-        { text: '团队简介', link: '/Intro/readme' },
-        { text: '实践动态', link: '/News/readme' },
-        { text: '成果材料', link: '/Materials/readme' }
-      ],
+        {
+          text: '实践专区',
+          items: [
+            { text: '团队简介', link: '/Intro/readme' },
+            { text: '实践动态', link: '/News/readme' },
+            { text: '成果材料', link: '/Materials/readme' }
+          ]
+        },
+
+        {
+          text: '院网点这里',
+          link: 'https://ckc.zju.edu.cn/'
+        }
+
+     ],
 
       // 4. 左侧侧边栏
       sidebar: [
+        {
+          text: '前言',
+          collapsed: false,
+          items: [
+            { text: '开始阅读', link: '/start/start_reading' }
+          ]
+        },
         {
           text: '关于我们',
           collapsed: false,

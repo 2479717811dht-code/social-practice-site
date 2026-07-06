@@ -12,12 +12,12 @@ hero:
 
   actions:
     - theme: brand
-      text: 了解团队简介
-      link: /Intro/readme
+      text: 开始阅读
+      link: /start/start_reading
 
     - theme: alt
-      text: 查看实践动态
-      link: /News/readme
+      text: Check in GitHub
+      link: https://github.com/2479717811dht-code/social-practice-site
 
 features:
   - icon: "👥"
