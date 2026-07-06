@@ -152,8 +152,8 @@ export default withMermaid(
           collapsed: false,
           items: [
             { text: '概览', link: '/Materials/readme' },
-            { text: '暑期支教', link: '/Materials/volunteer_teaching' },
-            { text: '红色调研', link: '/Materials/research' }
+            { text: '红色调研', link: '/Materials/research' },
+            { text: '暑期支教', link: '/Materials/volunteer_teaching' }
           ]
         }
       ],
