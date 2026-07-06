@@ -113,6 +113,7 @@ export default withMermaid(
           collapsed: false,
           items: [
             { text: '概览', link: '/Intro/readme' },
+            { text: '人员招募与前期准备', link: '/Intro/prepare' },
             { text: '团队与队员介绍', link: '/Intro/team' },
             { text: '破冰活动', link: '/Intro/ice_breaking' },
             { text: '社会实践立项', link: '/Intro/project_initiation' },

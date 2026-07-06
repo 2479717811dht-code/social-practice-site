@@ -10,10 +10,10 @@ hero:
   actions:
     - theme: brand
       text: 了解团队简介
-      link: /Intro/team
+      link: /Intro/readme
     - theme: alt
       text: 查看实践动态
-      link: /News/day01
+      link: /News/readme
 
 features:
   - title: "🧱 团队简介"
