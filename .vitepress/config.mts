@@ -112,7 +112,7 @@ export default withMermaid(
 
         {
           text: '院网点这里',
-          link: 'https://ckc.zju.edu.cn/'
+          link: 'http://ckc.zju.edu.cn/'
         }
 
      ],
