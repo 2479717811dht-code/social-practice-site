@@ -395,3 +395,21 @@
   justify-content: center;
   margin-top: 0;
 }
+
+/* 首页模块顺序：主视觉 → 实践介绍 → 实践路线 → 三张功能卡片 */
+.VPHome {
+  display: flex;
+  flex-direction: column;
+}
+
+.VPHome > .VPHomeHero {
+  order: 1;
+}
+
+.VPHome > .motion-section {
+  order: 2;
+}
+
+.VPHome > .VPFeatures {
+  order: 3;
+}
