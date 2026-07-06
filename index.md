@@ -40,10 +40,6 @@ features:
 ---
 
 <MotionSection>
-<div class="home-custom-section">
-  <div class="section-subtitle">OUR PRACTICE · 2026</div>
-
-
   <h2>从红色调研出发，把青春写在基层一线</h2>
 
   <p class="home-section__desc">
@@ -61,9 +57,6 @@ features:
 </MotionSection>
 
 <MotionSection>
-<div class="home-custom-section">
-  <div class="section-subtitle">RACTICE ROUTE</div>
-
 
 
   <h2>一场从调研到行动的青春实践</h2>
