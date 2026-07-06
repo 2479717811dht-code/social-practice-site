@@ -41,7 +41,7 @@ features:
 
 <MotionSection>
 <div class="home-custom-section">
-  <div class="section-subtitle"><center>OUR PRACTICE · 2026</center></div>
+  <div class="section-subtitle">OUR PRACTICE · 2026</div>
 
 
   <h2>从红色调研出发，把青春写在基层一线</h2>
@@ -62,29 +62,31 @@ features:
 
 <MotionSection>
 <div class="home-custom-section">
-  <div class="section-subtitle"><center>RACTICE ROUTE</center></div>
+  <div class="section-subtitle">RACTICE ROUTE</div>
+
 
 
   <h2>一场从调研到行动的青春实践</h2>
 
   <div class="practice-route">
     <article class="practice-route__item">
-      <div class="practice-route__number"><center>01 · RESEARCH</center></div>
+      <div class="practice-route__number">01 · RESEARCH</div>
       <h3>走访调研</h3>
       <p>深入红色文化场馆与实践现场，梳理历史资源、记录革命故事。</p>
     </article>
 
 <article class="practice-route__item">
-  <div class="practice-route__number"><center>02 · SERVICE</center></div>
+  <div class="practice-route__number">02 · SERVICE</div>
   <h3>公益支教</h3>
   <p>围绕学习辅导、兴趣拓展与励志教育，为学生带来真实陪伴。</p>
 </article>
 
 <article class="practice-route__item">
-    <div class="practice-route__number"><center>03 · SHARE</center></div>
+    <div class="practice-route__number">03 · SHARE</div>
   <h3>成果转化</h3>
   <p>通过调研报告、微团课、主题视频与宣传材料，让实践持续产生影响。</p>
 </article>
+
 
   </div>
 </div>
