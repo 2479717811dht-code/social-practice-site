@@ -17,9 +17,7 @@ export default {
       observer?.disconnect()
 
       const pageRoot =
-        document.querySelector<HTMLElement>('.VPContent') ??
-        document.querySelector<HTMLElement>('.VPDoc') ??
-        document.querySelector<HTMLElement>('.VPHome')
+        document.querySelector<HTMLElement>('.VPDoc')
 
       if (!pageRoot) return
 
@@ -48,14 +46,7 @@ export default {
         }
       )
 
-      const selector = [
-        '.VPDoc .content > *',
-        '.VPPage .content > *',
-        '.VPHome .home-section',
-        '.VPHome .practice-route__item',
-        '.VPHome .home-link-card',
-        '.VPHome .VPFeature'
-      ].join(',')
+      const selector = '.VPDoc .content > *'
 
       const targets = Array.from(
         document.querySelectorAll<HTMLElement>(selector)
