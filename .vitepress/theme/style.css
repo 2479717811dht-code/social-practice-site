@@ -927,66 +927,46 @@ html {
    左侧侧边栏
    ------------------------- */
 /* 左侧目录：当前页面的红金渐变区域加大，并把亮线移到左侧外面 */
+/* 左侧目录：不再显示左侧亮线，悬停只改文字颜色 */
 .VPSidebarItem .item {
   position: relative;
   overflow: visible;
-  border-radius: 12px;
-  transition:
-    background 0.22s ease,
-    transform 0.22s ease;
+  border-radius: 10px;
+  transition: background 0.2s ease;
 }
 
+/* 鼠标放上去：不要整块红色背景、不要右移 */
 .VPSidebarItem .item:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(169, 40, 45, 0.1),
-    rgba(208, 138, 53, 0.045) 65%,
-    transparent
-  );
-  transform: translateX(4px);
+  background: transparent;
+  transform: none;
 }
 
+.VPSidebarItem .item:hover .link {
+  color: var(--vp-c-brand-1);
+}
+
+/* 当前正在看的页面：保留很淡的底色 */
 .VPSidebarItem.is-active > .item {
-  margin-right: -10px;
-  margin-left: -10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  border-radius: 14px;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
   background: linear-gradient(
     90deg,
-    rgba(169, 40, 45, 0.18) 0%,
-    rgba(196, 64, 54, 0.1) 42%,
-    rgba(208, 138, 53, 0.055) 74%,
-    rgba(208, 138, 53, 0.015) 100%
+    rgba(169, 40, 45, 0.1) 0%,
+    rgba(208, 138, 53, 0.035) 72%,
+    transparent 100%
   );
 }
 
+/* 禁用左侧亮线 */
 .VPSidebarItem.is-active > .item::before {
-  position: absolute;
-  top: 13%;
-  bottom: 13%;
-  left: -8px;
-  z-index: 2;
-  width: 4px;
-  border-radius: 999px;
-  background: linear-gradient(
-    180deg,
-    #9d2028 0%,
-    #c54038 48%,
-    #d08a35 100%
-  );
-  box-shadow:
-    0 0 10px rgba(169, 40, 45, 0.32),
-    0 0 18px rgba(208, 138, 53, 0.16);
-  content: "";
-  pointer-events: none;
+  display: none;
 }
 
 .VPSidebarItem.is-active > .item .link {
   color: var(--vp-c-brand-1);
   font-weight: 800;
 }
-
 /* -------------------------
    右侧目录
    ------------------------- */
