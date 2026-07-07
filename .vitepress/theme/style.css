@@ -954,10 +954,10 @@ html {
 
 .VPSidebarItem.is-active > .item::before {
   position: absolute;
-  top: 20%;
-  bottom: 20%;
+  top: 18%;
+  bottom: 18%;
   left: -6px;
-  width: 2px;
+  width: 3px;
   border-radius: 99px;
   background: linear-gradient(
     180deg,
