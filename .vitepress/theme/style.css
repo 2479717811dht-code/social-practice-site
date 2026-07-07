@@ -620,3 +620,547 @@
     transform: none !important;
   }
 }
+
+/* =========================================================
+   全站细节增强：内页、目录、标题、图片、表格、阅读体验
+   直接放在 style.css 最后
+   ========================================================= */
+
+/* 平滑滚动、选中文字颜色 */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(169, 40, 45, 0.2);
+  color: var(--vp-c-text-1);
+}
+
+/* -------------------------
+   内页整体阅读区域
+   ------------------------- */
+.VPDoc .content-container {
+  position: relative;
+}
+
+.VPDoc .content {
+  animation: doc-page-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes doc-page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------
+   一级标题：长渐变横线
+   ------------------------- */
+.VPDoc .content h1 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 42px;
+  padding-bottom: 22px;
+  color: var(--vp-c-text-1);
+  font-size: clamp(2.25rem, 4vw, 3.4rem);
+  letter-spacing: 0.035em;
+}
+
+/* 淡淡的整行底线 */
+.VPDoc .content h1::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(169, 40, 45, 0.55) 0%,
+    rgba(208, 138, 53, 0.42) 45%,
+    rgba(169, 40, 45, 0.05) 100%
+  );
+  content: "";
+}
+
+/* 主渐变强调线，长度明显变长 */
+.VPDoc .content h1::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: min(48%, 430px);
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #9d2028 0%,
+    #c54038 42%,
+    #d08a35 78%,
+    rgba(208, 138, 53, 0.1) 100%
+  );
+  box-shadow:
+    0 3px 12px rgba(169, 40, 45, 0.22),
+    110px 0 12px rgba(208, 138, 53, 0.1);
+  content: "";
+}
+
+/* -------------------------
+   二、三级标题
+   ------------------------- */
+.VPDoc .content h2 {
+  position: relative;
+  margin-top: 64px;
+  margin-bottom: 24px;
+  padding: 8px 0 8px 18px;
+  border-left: 5px solid transparent;
+  border-image: linear-gradient(
+      180deg,
+      var(--vp-c-brand-1),
+      #d08a35
+    )
+    1;
+  color: var(--vp-c-text-1);
+  line-height: 1.35;
+}
+
+.VPDoc .content h2::after {
+  position: absolute;
+  bottom: -8px;
+  left: 18px;
+  width: 86px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--vp-c-brand-1),
+    rgba(208, 138, 53, 0.15)
+  );
+  content: "";
+}
+
+.VPDoc .content h3 {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 13px;
+  color: var(--vp-c-brand-1);
+}
+
+.VPDoc .content h3::before {
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d08a35;
+  box-shadow: 0 0 0 4px rgba(208, 138, 53, 0.12);
+  content: "";
+}
+
+/* -------------------------
+   正文、链接、分隔线
+   ------------------------- */
+.VPDoc .content p,
+.VPDoc .content li {
+  line-height: 2;
+}
+
+.VPDoc .content p {
+  margin: 18px 0;
+}
+
+.VPDoc .content a:not(.header-anchor) {
+  color: var(--vp-c-brand-1);
+  font-weight: 650;
+  text-decoration: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(169, 40, 45, 0.16),
+      rgba(208, 138, 53, 0.08)
+    )
+    0 100% / 100% 1px no-repeat;
+  transition:
+    color 0.22s ease,
+    background-size 0.22s ease;
+}
+
+.VPDoc .content a:not(.header-anchor):hover {
+  color: var(--vp-c-brand-2);
+  background-size: 100% 3px;
+}
+
+.VPDoc .content hr {
+  height: 1px;
+  margin: 48px 0;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(169, 40, 45, 0.25),
+    rgba(208, 138, 53, 0.38),
+    rgba(169, 40, 45, 0.25),
+    transparent
+  );
+}
+
+/* -------------------------
+   引用块
+   ------------------------- */
+.VPDoc .content blockquote {
+  position: relative;
+  margin: 28px 0;
+  padding: 20px 24px 20px 28px;
+  border: 1px solid rgba(169, 40, 45, 0.12);
+  border-left: 5px solid var(--vp-c-brand-1);
+  border-radius: 0 18px 18px 0;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(169, 40, 45, 0.07),
+      rgba(208, 138, 53, 0.035)
+    );
+  box-shadow: 0 10px 28px rgba(89, 29, 26, 0.05);
+}
+
+.VPDoc .content blockquote::before {
+  position: absolute;
+  top: 4px;
+  right: 18px;
+  color: rgba(169, 40, 45, 0.16);
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  content: "“";
+}
+
+.VPDoc .content blockquote p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+/* -------------------------
+   图片：悬浮、边框、光影
+   ------------------------- */
+.VPDoc .content img {
+  display: block;
+  max-width: 100%;
+  margin: 30px auto;
+  border: 1px solid rgba(169, 40, 45, 0.14);
+  border-radius: 18px;
+  box-shadow:
+    0 14px 36px rgba(60, 29, 25, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.32s ease,
+    border-color 0.32s ease;
+}
+
+.VPDoc .content img:hover {
+  border-color: rgba(169, 40, 45, 0.34);
+  box-shadow:
+    0 24px 52px rgba(60, 29, 25, 0.16),
+    0 5px 14px rgba(0, 0, 0, 0.06);
+  transform: translateY(-7px) scale(1.008);
+}
+
+/* -------------------------
+   表格
+   ------------------------- */
+.VPDoc .content table {
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  margin: 28px 0;
+  border: 1px solid rgba(169, 40, 45, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(70, 30, 25, 0.05);
+}
+
+.VPDoc .content th {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(169, 40, 45, 0.11),
+      rgba(208, 138, 53, 0.08)
+    );
+  color: var(--vp-c-brand-1);
+  font-weight: 800;
+}
+
+.VPDoc .content tr {
+  transition: background 0.18s ease;
+}
+
+.VPDoc .content tbody tr:hover {
+  background: rgba(169, 40, 45, 0.045);
+}
+
+/* -------------------------
+   代码块
+   ------------------------- */
+.VPDoc .content div[class*="language-"] {
+  overflow: hidden;
+  margin: 28px 0;
+  border: 1px solid rgba(169, 40, 45, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(35, 25, 24, 0.1);
+}
+
+.VPDoc .content :not(pre) > code {
+  padding: 3px 7px;
+  border: 1px solid rgba(169, 40, 45, 0.12);
+  border-radius: 7px;
+  background: rgba(169, 40, 45, 0.06);
+  color: var(--vp-c-brand-1);
+  font-weight: 650;
+}
+
+/* -------------------------
+   左侧侧边栏
+   ------------------------- */
+.VPSidebarItem .item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.VPSidebarItem .item:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(169, 40, 45, 0.09),
+    rgba(208, 138, 53, 0.035)
+  );
+  transform: translateX(5px);
+}
+
+.VPSidebarItem.is-active > .item {
+  background: linear-gradient(
+    90deg,
+    rgba(169, 40, 45, 0.12),
+    rgba(208, 138, 53, 0.04)
+  );
+}
+
+.VPSidebarItem.is-active > .item::before {
+  position: absolute;
+  top: 18%;
+  bottom: 18%;
+  left: 0;
+  width: 3px;
+  border-radius: 99px;
+  background: linear-gradient(
+    180deg,
+    var(--vp-c-brand-1),
+    #d08a35
+  );
+  content: "";
+}
+
+.VPSidebarItem.is-active > .item .link {
+  color: var(--vp-c-brand-1);
+  font-weight: 800;
+}
+
+/* -------------------------
+   右侧目录
+   ------------------------- */
+.VPDocAsideOutline .outline-link {
+  border-radius: 8px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.VPDocAsideOutline .outline-link:hover {
+  padding-left: 8px;
+  background: rgba(169, 40, 45, 0.06);
+  color: var(--vp-c-brand-1);
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 750;
+}
+
+/* -------------------------
+   上一篇、下一篇
+   ------------------------- */
+.VPDocFooter .pager-link {
+  overflow: hidden;
+  border: 1px solid rgba(169, 40, 45, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 252, 247, 0.52);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: rgba(169, 40, 45, 0.28);
+  box-shadow: 0 15px 32px rgba(92, 32, 30, 0.12);
+  transform: translateY(-5px);
+}
+
+.dark .VPDocFooter .pager-link {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* -------------------------
+   回到顶部按钮
+   ------------------------- */
+.VPBackToTop {
+  border: 1px solid rgba(169, 40, 45, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(92, 32, 30, 0.12);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.VPBackToTop:hover {
+  box-shadow: 0 12px 26px rgba(92, 32, 30, 0.2);
+  transform: translateY(-4px);
+}
+
+/* 深色模式微调 */
+.dark .VPDoc .content blockquote {
+  border-color: rgba(229, 109, 98, 0.16);
+  background:
+    linear-gradient(
+      115deg,
+      rgba(229, 109, 98, 0.11),
+      rgba(240, 142, 116, 0.045)
+    );
+}
+
+.dark .VPDoc .content img,
+.dark .VPDoc .content table,
+.dark .VPDoc .content div[class*="language-"] {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 手机端：标题线不要过长 */
+@media (max-width: 768px) {
+  .VPDoc .content h1 {
+    margin-bottom: 32px;
+    padding-bottom: 17px;
+  }
+
+  .VPDoc .content h1::after {
+    width: min(68%, 300px);
+  }
+
+  .VPDoc .content h2 {
+    margin-top: 48px;
+  }
+}
+
+/* 用户系统设置为减少动画时，全部停掉 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .VPDoc .content,
+  .VPDoc .content img,
+  .VPSidebarItem .item,
+  .VPDocAsideOutline .outline-link,
+  .VPDocFooter .pager-link,
+  .VPBackToTop,
+  .VPDoc .content tr {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   页面切换淡入 + 向下滚动显现
+   ========================================================= */
+
+/* 每次切到新页面时，正文区域柔和淡入 */
+.VPContent.vp-route-enter {
+  animation: vp-route-enter 0.52s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes vp-route-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 初始状态：内容在进入视口前略微下移、透明 */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(3px);
+  will-change: opacity, transform, filter;
+}
+
+/* 进入视口后渐显 */
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition:
+    opacity 0.72s ease,
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.72s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* 让卡片进入时更有层次 */
+.practice-route__item.scroll-reveal,
+.home-link-card.scroll-reveal,
+.VPFeature.scroll-reveal {
+  transform: translateY(38px) scale(0.985);
+}
+
+.practice-route__item.scroll-reveal.is-revealed,
+.home-link-card.scroll-reveal.is-revealed,
+.VPFeature.scroll-reveal.is-revealed {
+  transform: translateY(0) scale(1);
+}
+
+/* 内容图片也有轻微进入感 */
+.VPDoc .content img.scroll-reveal {
+  transform: translateY(26px) scale(0.985);
+}
+
+.VPDoc .content img.scroll-reveal.is-revealed {
+  transform: translateY(0) scale(1);
+}
+
+/* 用户系统设为“减少动态效果”时，立即显示全部内容 */
+@media (prefers-reduced-motion: reduce) {
+  .VPContent.vp-route-enter {
+    animation: none !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.is-revealed {
+    opacity: 1 !important;
+    filter: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
