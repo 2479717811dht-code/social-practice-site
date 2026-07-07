@@ -11,54 +11,7 @@ export default {
 
     if (typeof window === 'undefined') return
 
-    const enableHeroTilt = () => {
-  document.addEventListener('pointermove', (event) => {
-    const target = event.target as HTMLElement
-    const card = target.closest<HTMLElement>(
-      '.VPHomeHero .image-container'
-    )
-
-    if (!card) return
-
-    const rect = card.getBoundingClientRect()
-
-    const x = (event.clientX - rect.left) / rect.width
-    const y = (event.clientY - rect.top) / rect.height
-
-    const rotateY = (x - 0.5) * 14
-    const rotateX = (0.5 - y) * 14
-
-    card.style.setProperty('--shine-x', `${x * 100}%`)
-    card.style.setProperty('--shine-y', `${y * 100}%`)
-
-    card.style.transform = `
-      perspective(1000px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-      scale(1.025)
-    `
-
-    card.classList.add('is-tilting')
-  })
-
-  document.addEventListener('pointerout', (event) => {
-    const target = event.target as HTMLElement
-    const card = target.closest<HTMLElement>(
-      '.VPHomeHero .image-container'
-    )
-
-    if (!card) return
-
-    const next = event.relatedTarget as Node | null
-
-    if (next && card.contains(next)) return
-
-    card.style.transform = ''
-    card.classList.remove('is-tilting')
-  })
-}
-
-enableHeroTilt()
+    
 
     let observer: IntersectionObserver | undefined
 
