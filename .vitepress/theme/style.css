@@ -109,7 +109,37 @@
   line-height: 1.9;
 }
 
+/* 校徽 3D 跟随倾斜 */
 .VPHomeHero .image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.18s ease-out;
+}
+
+.VPHomeHero .image-container::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--shine-x, 50%) var(--shine-y, 50%),
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.16) 18%,
+    transparent 48%
+  );
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.VPHomeHero .image-container.is-tilting::after {
+  opacity: 1;
+}
+
+.VPHomeHero .image-container img {
   animation: logo-float 5s ease-in-out infinite;
 }
 
