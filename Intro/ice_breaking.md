@@ -4,7 +4,9 @@ import pdfUrl from './pdfs/ice_breaking.pdf'
 </script>
 
 
-# <center>破冰 PPT</center>
+# <center>破冰活动</center>
+
+我们完成招募，成功组建了团队后，在团队组件成功后进行了破冰活动，队员们得以渐渐熟络起来。
 
 以下是本次社会实践团组件成功后的破冰活动 PPT，已经转为 PDF，您可以直接在线翻阅：
 
@@ -24,5 +26,5 @@ import pdfUrl from './pdfs/ice_breaking.pdf'
 ### 📥 下载文件
 
 <a :href="pdfUrl" target="_blank" style="color: var(--vp-c-brand-1); font-weight: bold; text-decoration: underline;">
-  ⬇️ 点击下载实践报告 PDF 文件
+  ⬇️ 点击下载破冰活动 PDF 文件
 </a>

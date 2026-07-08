@@ -22,5 +22,5 @@ import pdfUrl from './pdfs/project_initiation.pdf'
 ### 📥 下载文件
 
 <a :href="pdfUrl" target="_blank" style="color: var(--vp-c-brand-1); font-weight: bold; text-decoration: underline;">
-  ⬇️ 点击下载实践报告 PDF 文件
+  ⬇️ 点击下载立项 PDF 文件
 </a>
