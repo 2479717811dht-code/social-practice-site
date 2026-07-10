@@ -120,10 +120,10 @@ export default withMermaid(
       // 4. 左侧侧边栏
       sidebar: [
         {
-          text: '前言',
+          text: '开始阅读',
           collapsed: false,
           items: [
-            { text: '开始阅读', link: '/start/start_reading' }
+            { text: '前言', link: '/start/start_reading' }
           ]
         },
         {
